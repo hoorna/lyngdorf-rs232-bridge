@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="338" viewBox="0 0 640 338" font-family="Helvetica, Arial, sans-serif">
+<rect width="640" height="338" fill="#ffffff"/>
+<text x="320.0" y="28" font-size="17" font-weight="bold" text-anchor="middle" fill="#202020">DSD Tech SH-RJ12B: original plug</text>
+<rect x="175" y="70" width="330" height="120" rx="8" fill="#eef3f7" stroke="#7a8a99" stroke-width="2"/>
+<rect x="205" y="190" width="270" height="30" fill="#2b2b2b"/>
+<text x="202.5" y="62" font-size="14" text-anchor="middle" fill="#202020">1</text>
+<rect x="196.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="193.5" y="132" width="18" height="58" fill="#1f5fbf" stroke="#1f5fbf"/>
+<text x="257.5" y="62" font-size="14" text-anchor="middle" fill="#202020">2</text>
+<rect x="251.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="248.5" y="132" width="18" height="58" fill="#f2c618" stroke="#f2c618"/>
+<text x="312.5" y="62" font-size="14" text-anchor="middle" fill="#202020">3</text>
+<rect x="306.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="303.5" y="132" width="18" height="58" fill="#2e9e45" stroke="#2e9e45"/>
+<text x="367.5" y="62" font-size="14" text-anchor="middle" fill="#202020">4</text>
+<rect x="361.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="358.5" y="132" width="18" height="58" fill="#d93025" stroke="#d93025"/>
+<text x="422.5" y="62" font-size="14" text-anchor="middle" fill="#202020">5</text>
+<rect x="416.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="413.5" y="132" width="18" height="58" fill="#202020" stroke="#202020"/>
+<text x="477.5" y="62" font-size="14" text-anchor="middle" fill="#202020">6</text>
+<rect x="471.5" y="78" width="12" height="48" fill="#d4af37" stroke="#9c7d1c"/>
+<rect x="468.5" y="132" width="18" height="58" fill="#ffffff" stroke="#888"/>
+<text x="161" y="252" font-size="13" text-anchor="end" fill="#555">Wire</text>
+<text x="202.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">blue</text>
+<text x="257.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">yellow</text>
+<text x="312.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">green</text>
+<text x="367.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">red</text>
+<text x="422.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">black</text>
+<text x="477.5" y="252" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">white</text>
+<text x="161" y="286" font-size="13" text-anchor="end" fill="#555">Cable</text>
+<text x="202.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">NC</text>
+<text x="257.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">GND</text>
+<text x="312.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">RXD</text>
+<text x="367.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">TXD</text>
+<text x="422.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">GND</text>
+<text x="477.5" y="286" font-size="13" font-weight="bold" text-anchor="middle" fill="#202020">NC</text>
+<text x="320.0" y="328" font-size="12" text-anchor="middle" fill="#666">Plug seen from the contact side, latch at the back, cable pointing down</text>
+</svg>

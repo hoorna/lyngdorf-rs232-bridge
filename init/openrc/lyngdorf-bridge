@@ -1,0 +1,19 @@
+#!/sbin/openrc-run
+# Lyngdorf TCP <-> RS232 bridge (USB CP210x), OpenRC service.
+# For the Python version use:
+#   command="/usr/bin/python3"
+#   command_args="-u /usr/local/bin/lyngdorf_bridge.py"
+
+description="Lyngdorf TCP <-> RS232 bridge"
+supervisor=supervise-daemon
+command="/usr/local/bin/lyngdorf_bridge"
+command_args=""
+output_log="/var/log/lyngdorf-bridge.log"
+error_log="/var/log/lyngdorf-bridge.log"
+respawn_delay=5
+respawn_max=0
+
+depend() {
+    need net
+    after udev
+}

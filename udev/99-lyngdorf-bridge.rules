@@ -1,0 +1,5 @@
+# Lets members of the "plugdev" group use a CP210x (10c4:ea60) through libusb,
+# so lyngdorf_bridge can run without root. Not needed when running as root.
+# Install: sudo cp 99-lyngdorf-bridge.rules /etc/udev/rules.d/
+#          sudo udevadm control --reload && sudo udevadm trigger
+SUBSYSTEM=="usb", ATTR{idVendor}=="10c4", ATTR{idProduct}=="ea60", MODE="0660", GROUP="plugdev"

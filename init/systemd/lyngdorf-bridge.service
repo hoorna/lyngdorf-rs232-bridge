@@ -1,0 +1,17 @@
+[Unit]
+Description=Lyngdorf TCP <-> RS232 bridge (USB CP210x)
+After=network.target
+
+[Service]
+# C++ version (default). For the Python version use instead:
+# ExecStart=/usr/bin/python3 -u /usr/local/bin/lyngdorf_bridge.py
+ExecStart=/usr/local/bin/lyngdorf_bridge
+Restart=always
+RestartSec=5
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

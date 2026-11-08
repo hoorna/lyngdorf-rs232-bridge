@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Forward TCP 4001 to the Lyngdorf bridge on another machine (e.g. a Diretta Target).
+# Replace TARGET_IP with the address of the machine that runs the bridge.
+
+description="Forward TCP 4001 to the Lyngdorf bridge"
+supervisor=supervise-daemon
+command="/usr/bin/socat"
+command_args="TCP-LISTEN:4001,fork,reuseaddr TCP:TARGET_IP:4001"
+respawn_delay=5
+respawn_max=0
+
+depend() {
+    need net
+}

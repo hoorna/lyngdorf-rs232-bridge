@@ -1,0 +1,15 @@
+[Unit]
+Description=Forward TCP 4001 to the Lyngdorf bridge on another machine (e.g. a Diretta Target)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+# Replace TARGET_IP with the address of the machine that runs the bridge.
+ExecStart=/usr/bin/socat TCP-LISTEN:4001,fork,reuseaddr TCP:TARGET_IP:4001
+Restart=always
+RestartSec=5
+DynamicUser=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
