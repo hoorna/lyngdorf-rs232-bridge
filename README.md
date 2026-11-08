@@ -1,9 +1,10 @@
 # lyngdorf-rs232-bridge
 
 Control a **Lyngdorf TDAi-2170** with the **Lyngdorf Remote** app through its RS232 port,
-using a **DSD Tech SH-RJ12B** USB-to-RJ12 RS232 cable and a **Raspberry Pi** (or any Linux machine).
+using a [**DSD Tech SH-RJ12B**](https://www.deshide.com/product-details_SH-RJ12B.html) USB-to-RJ12 RS232 cable and a **Raspberry Pi** (or any Linux machine).
 
-This replaces a network serial device server such as a Moxa NPort. The Pi exposes the
+This replaces the network serial device server (Moxa NPort) that Lyngdorf describes in its
+[Moxa setup guide](https://lyngdorf.steinwaylyngdorf.com/downloads/lyngdorf-tdai-2170-moxa-setup-guide/). The Pi exposes the
 amplifier's serial port on TCP port 4001, and the app connects to it just as it would to a Moxa.
 
 ```
@@ -82,6 +83,12 @@ In the app, go to **Devices**, tap **+** and enter:
 
 If the cable is connected to a Diretta Target, the app cannot reach the Target directly.
 See [docs/diretta.md](docs/diretta.md) for the port forwarding on the Diretta Host.
+
+## Further reading
+
+- [DSD Tech SH-RJ12B product page](https://www.deshide.com/product-details_SH-RJ12B.html)
+- [Lyngdorf TDAi-2170 external control manual](https://lyngdorf.steinwaylyngdorf.com/downloads/lyngdorf-tdai-2170-external-control-manual/): the complete serial command list
+- [Lyngdorf TDAi-2170 Moxa setup guide](https://lyngdorf.steinwaylyngdorf.com/downloads/lyngdorf-tdai-2170-moxa-setup-guide/): the official network setup this repository replaces
 
 ## Repository layout
 

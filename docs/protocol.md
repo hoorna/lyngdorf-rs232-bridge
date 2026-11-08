@@ -2,8 +2,8 @@
 
 A short summary of the TDAi-2170 serial protocol, enough to test the connection and to
 understand the trace logs. For the complete command list, including the input and voicing
-numbers, see the TDAi-2170 external control documentation on the download pages of
-[lyngdorf.com](https://www.lyngdorf.com).
+numbers, see the
+[Lyngdorf TDAi-2170 external control manual](https://lyngdorf.steinwaylyngdorf.com/downloads/lyngdorf-tdai-2170-external-control-manual/).
 
 The bridge itself does not interpret the protocol; it passes all bytes through unchanged.
 

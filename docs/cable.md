@@ -1,6 +1,6 @@
 # Modifying the DSD Tech SH-RJ12B cable
 
-The DSD Tech SH-RJ12B is a USB-to-RS232 cable with a CP2102N chip and an RJ12 plug.
+The [DSD Tech SH-RJ12B](https://www.deshide.com/product-details_SH-RJ12B.html) is a USB-to-RS232 cable with a CP2102N chip and an RJ12 plug.
 Its plug does not match the RS232 port of the Lyngdorf TDAi-2170, so a new plug has to be
 crimped on.
 
