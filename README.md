@@ -96,6 +96,8 @@ See [docs/diretta.md](docs/diretta.md) for the port forwarding on the Diretta Ho
 src/lyngdorf_bridge.cpp      event-driven C++ bridge (libusb)
 python/lyngdorf_bridge.py    the same bridge in Python (pyusb), no compiler needed
 Makefile                     builds the C++ bridge
+scripts/build-static.sh      builds a static release binary (used by GitHub Actions)
+.github/workflows/           builds and publishes release binaries
 init/systemd/                systemd units (bridge, port forward)
 init/openrc/                 OpenRC services (bridge, port forward)
 udev/                        udev rule to run the bridge without root

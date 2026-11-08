@@ -16,6 +16,29 @@ There are two versions with the same behaviour:
 Run only one of them at a time, and not together with ser2net: only one program can use
 the cable.
 
+## Download a ready-made binary
+
+For 64-bit ARM Linux (arm64), such as a Raspberry Pi 3, 4 or 5 with a 64-bit operating
+system, a ready-made C++ binary is available on the
+[releases page](https://github.com/hoorna/lyngdorf-rs232-bridge/releases). Check that your
+system is 64-bit ARM: `uname -m` must print `aarch64`.
+
+The binary is statically linked: libusb and the C library are included, so you do not need
+to install a compiler or libusb.
+
+```sh
+cd /tmp
+curl -fLO https://github.com/hoorna/lyngdorf-rs232-bridge/releases/latest/download/lyngdorf_bridge-linux-arm64
+curl -fLO https://github.com/hoorna/lyngdorf-rs232-bridge/releases/latest/download/sha256sums.txt
+sha256sum -c sha256sums.txt
+sudo install -m 0755 lyngdorf_bridge-linux-arm64 /usr/local/bin/lyngdorf_bridge
+```
+
+`sha256sum -c` must report `OK`. Then continue with [Run](#run) below.
+
+The release binaries are built automatically by GitHub Actions
+(`.github/workflows/release.yml`) with `scripts/build-static.sh`.
+
 ## C++ version
 
 ### Build and install

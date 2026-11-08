@@ -69,6 +69,10 @@ Differences from [bridge.md](bridge.md):
   make install
   ```
 
+- Instead of building, you can also use the
+  [ready-made binary](bridge.md#download-a-ready-made-binary). It is built for any arm64
+  CPU instead of specifically for the Raspberry Pi 4; for this program that makes no
+  noticeable difference. Leave out `sudo` in the commands.
 - The service is `init/openrc/lyngdorf-bridge`. For the Python version, change `command` and
   `command_args` as described in the comment at the top of that file.
 
