@@ -17,7 +17,7 @@ In the app you then enter the IP address of the **Host**, port 4001.
 ## 1. Run the bridge on the Target
 
 Set up ser2net or `lyngdorf_bridge` on the Target as described in [ser2net.md](ser2net.md)
-or [bridge.md](bridge.md), and test it there with the `!DEVICE?` command from the
+or [bridge.md](bridge.md) (on GentooPlayer: [gentooplayer.md](gentooplayer.md)), and test it there with the `!DEVICE?` command from the
 [README](../README.md#3-test).
 
 On a Target, use the C++ version of `lyngdorf_bridge` rather than the Python version: it does
@@ -43,7 +43,8 @@ the Target gets the same address after a reboot. If not, give it a fixed address
 Install socat on the Host:
 
 ```sh
-sudo apt install socat
+sudo apt install socat          # Debian / Raspberry Pi OS
+emerge -av net-misc/socat       # GentooPlayer / Gentoo
 ```
 
 Try it by hand first:
@@ -61,7 +62,10 @@ reboots, the next connection simply works again.
 
 ## 4. Make it permanent
 
-Copy the unit file, replace `TARGET_IP` and enable it:
+The service files are in the `init/` directory of this repository. In both cases, replace
+`<address of your Target>` with the address you found in step 2.
+
+### systemd (Debian / Raspberry Pi OS)
 
 ```sh
 sudo cp init/systemd/lyngdorf-forward.service /etc/systemd/system/
@@ -70,7 +74,28 @@ sudo systemctl daemon-reload
 sudo systemctl enable --now lyngdorf-forward
 ```
 
-For an OpenRC-based Host (e.g. GentooPlayer) see [gentoo.md](gentoo.md).
+Remove:
+
+```sh
+sudo systemctl disable --now lyngdorf-forward
+```
+
+### OpenRC (GentooPlayer / Gentoo)
+
+```sh
+cp init/openrc/lyngdorf-forward /etc/init.d/
+sed -i 's/TARGET_IP/<address of your Target>/' /etc/init.d/lyngdorf-forward
+chmod +x /etc/init.d/lyngdorf-forward
+rc-update add lyngdorf-forward default
+rc-service lyngdorf-forward start
+```
+
+Remove:
+
+```sh
+rc-service lyngdorf-forward stop
+rc-update del lyngdorf-forward default
+```
 
 ## Why socat and not an SSH tunnel?
 

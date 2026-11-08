@@ -22,12 +22,12 @@ Lyngdorf Remote app ──Wi-Fi/LAN──▶ Linux machine :4001 ──USB──
 | [docs/ser2net.md](docs/ser2net.md) | Route A: kernel has the `cp210x` driver → use ser2net |
 | [docs/bridge.md](docs/bridge.md) | Route B: no `cp210x` driver → use `lyngdorf_bridge` (C++ or Python) |
 | [docs/diretta.md](docs/diretta.md) | Bridge on a Diretta Target: port forwarding on the Diretta Host |
-| [docs/gentoo.md](docs/gentoo.md) | Differences for Gentoo / GentooPlayer (OpenRC, emerge, RamSystem) |
+| [docs/gentooplayer.md](docs/gentooplayer.md) | Installation on GentooPlayer, with the differences for Gentoo |
 | [docs/protocol.md](docs/protocol.md) | Short summary of the serial protocol |
 | [docs/troubleshooting.md](docs/troubleshooting.md) | When something does not work |
 
-Commands in this repository are for **Debian and Raspberry Pi OS**. Differences for other
-distributions are listed in the individual documents.
+Commands in this repository are for **Debian and Raspberry Pi OS**. For GentooPlayer and
+Gentoo, see [docs/gentooplayer.md](docs/gentooplayer.md).
 
 ## Quick start
 
